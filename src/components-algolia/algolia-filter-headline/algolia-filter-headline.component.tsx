@@ -4,7 +4,7 @@ import { FilterHeadline } from '~/components/filter-headline/filter-headline.com
 
 const mapAlgoliaFilterItems = (items: Array<any>): Array<{
   label: string
-  id: string | number
+  id: string
   isSelected: boolean
 }> => {
   return items.map(item => ({

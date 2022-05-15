@@ -3,3 +3,4 @@
 
 npx pnpm run lint
 npx pnpm run test
+npx pnpm run typecheck

@@ -12,10 +12,10 @@ const Template: ComponentStory<typeof FilterHeadline> = () => (
   <React.Fragment>
     <FilterHeadline
       items={[
-        { id: 1, isSelected: false, label: 'Test' },
-        { id: 2, isSelected: false, label: 'Test 1' },
-        { id: 3, isSelected: false, label: 'Test 2' },
-        { id: 4, isSelected: false, label: 'Test 3' },
+        { id: '1', isSelected: false, label: 'Test' },
+        { id: '2', isSelected: false, label: 'Test 1' },
+        { id: '3', isSelected: false, label: 'Test 2' },
+        { id: '4', isSelected: false, label: 'Test 3' },
       ]}
       onClicked={() => { }}
       title="Categories"

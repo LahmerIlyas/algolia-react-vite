@@ -3,7 +3,7 @@ import Typography from '../typography/typography.component'
 
 interface FilterHeadlineProps {
   items: Array<{
-    id: string | number
+    id: string
     label: string
     isSelected: boolean
   }>

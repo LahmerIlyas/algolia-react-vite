@@ -2,7 +2,7 @@
 import { useInfiniteHits } from 'react-instantsearch-hooks-web'
 import { ProductCard } from '~/components/product-card/product-card.component'
 
-const transformHits = (hits: Array<any>): Array => {
+const transformHits = (hits: Array<any>): Array<any> => {
   return hits.map(hit => ({
     id: hit.post_id,
     title: hit.post_title,
