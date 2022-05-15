@@ -4,13 +4,13 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite --port 3333 --open",
-    "lint": "eslint .",
+    "lint": "eslint . --fix",
     "lint-staged": "lint-staged --config lint-staged.js",
     "husky-install": "husky install",
     "typecheck": "tsc --noEmit",
     "prettier": "prettier src -check",
     "preview": "vite preview",
-    "test": "vitest",
+    "test": "vitest run",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
