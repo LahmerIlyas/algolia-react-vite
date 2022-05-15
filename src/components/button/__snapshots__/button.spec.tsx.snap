@@ -1,0 +1,13 @@
+// Vitest Snapshot v1
+
+exports[`Given button element > should renders primary variant correctly 1`] = `
+<button
+  className="px-4 py-2 rounded-2 border-2 font-medium bg-green-200"
+/>
+`;
+
+exports[`Given button element > should renders secondary variant correctly 1`] = `
+<button
+  className="px-4 py-2 rounded-2 border-2 font-medium bg-green-200"
+/>
+`;

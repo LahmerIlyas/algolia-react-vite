@@ -1,44 +1,41 @@
+import { AppBar } from '~/components/app-bar/app-bar.component'
+import { SearchPageHeader } from '~/components-algolia/search-page-header/search-page-header'
+import { AlgoliaProductList } from '~/components-algolia/algolia-product-list/algolia-product-list.component'
+import { AlgoliaFilterHeadline } from '~/components-algolia/algolia-filter-headline/algolia-filter-headline.component'
+import { useScrollToBottomListener } from '~/hooks/use-scroll-to-bottom-listener'
+
 export default function Index() {
-  const name = useRef<HTMLInputElement>(null)
-
-  const navigate = useNavigate()
-  const go = () => {
-    if (name.current)
-      navigate(`/hi/${encodeURIComponent(name.current.value)}`)
-  }
-
+  const { ref, isAtBottom } = useScrollToBottomListener()
   return (
-    <div>
-      <div className="i-carbon-campsite text-4xl inline-block" />
-      <p>
-        <a rel="noreferrer" href="https://github.com/antfu/vitesse-lite" target="_blank">
-        Vitesse Lite
-        </a>
-      </p>
-      <p>
-        <em className="text-sm op75">Opinionated Vite Starter Template</em>
-      </p>
-
-      <div className="py-4" />
-
-      <input
-        ref={name}
-        id="input"
-        placeholder="What's your name?"
-        type="text"
-        className="px-4 py-2 w-250px text-center bg-transparent outline-none outline-active:none border border-rounded border-gray-200 border-dark:gray-700"
-        onKeyDown={({ key }) => key === 'Enter' && go()}
-      />
-
-      <div>
-        <button
-          className="m-3 text-sm btn"
-          disabled={!name}
-          onClick={() => go() }
-        >
-        Go
-        </button>
+    <div ref={ref} className="px-8 h-screen overflow-scroll">
+      <AppBar />
+      <SearchPageHeader />
+      <div className="flex flex-row">
+        <div className="flex flex-col w-128 mr-16 gap-y-4">
+          <AlgoliaFilterHeadline
+            attribute="taxonomies.product_cat"
+            title="Categories"
+          />
+          <AlgoliaFilterHeadline
+            attribute="taxonomies.product_brand"
+            title="Brands"
+          />
+          <AlgoliaFilterHeadline
+            attribute="taxonomies.pa_storrelse"
+            title="Size"
+          />
+          <AlgoliaFilterHeadline
+            attribute="taxonomies.product_tag"
+            title="Tags"
+          />
+          <AlgoliaFilterHeadline
+            attribute="taxonomies.product_type"
+            title="Type"
+          />
+        </div>
+        <AlgoliaProductList hasReachedTheEnd={isAtBottom}/>
       </div>
     </div>
+
   )
 }

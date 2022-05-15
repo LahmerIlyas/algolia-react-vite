@@ -1,0 +1,42 @@
+// Vitest Snapshot v1
+
+exports[`Given product card element > should renders correctly 1`] = `
+<div
+  className="flex flex-col border-2 rounded-4 border-gray-200 px-4 py-4 lg:basis-[30%] grow shrink lg:max-w-[33%]"
+>
+  <img
+    className="rounded-4 border-none h-xs w-full object-cover object-top"
+    src="https://picsum.photos/200/300"
+  />
+  <h4
+    as="h4"
+    className="text-s4 truncate max-w-[100%]"
+  >
+    Test title
+  </h4>
+  <h5
+    as="h5"
+    className="text-caption mt-1 line-clamp-3 mb-4"
+  >
+    Test content
+  </h5>
+  <div
+    className="flex flex-row justify-between items-center mt-auto"
+  >
+    <h4
+      as="h4"
+      className="text-s4"
+      dangerouslySetInnerHTML={
+        {
+          "__html": "20",
+        }
+      }
+    />
+    <button
+      className="px-4 py-2 rounded-2 border-2 font-medium bg-green-200"
+    >
+      Buy Now
+    </button>
+  </div>
+</div>
+`;

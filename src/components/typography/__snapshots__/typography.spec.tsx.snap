@@ -1,0 +1,19 @@
+// Vitest Snapshot v1
+
+exports[`Given typography element > should renders correctly 1`] = `
+<h1
+  as="h1"
+  className="text-s1"
+>
+  H1
+</h1>
+`;
+
+exports[`Hi > renders correctly when there are no items 1`] = `
+<h1
+  as="h1"
+  className="text-s1"
+>
+  H1
+</h1>
+`;

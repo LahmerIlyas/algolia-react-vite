@@ -1,0 +1,26 @@
+// Vitest Snapshot v1
+
+exports[`Given breadcrumb element > should renders correctly 1`] = `
+<div
+  className="flex flex-row align-center gap-x-1 py-4"
+>
+  <h6
+    as="h6"
+    className="text-s6 font-normal"
+  >
+    Homepage
+  </h6>
+  <h6
+    as="h6"
+    className="text-s6 font-normal"
+  >
+    /
+  </h6>
+  <h6
+    as="h6"
+    className="text-s6 font-normal"
+  >
+     Fruit and vegetables
+  </h6>
+</div>
+`;

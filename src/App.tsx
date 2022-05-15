@@ -1,16 +1,17 @@
 import { Suspense } from 'react'
+import { InstantSearch } from 'react-instantsearch-hooks-web'
 import { BrowserRouter as Router } from 'react-router-dom'
-import Footer from './components/Footer'
+import { searchClient } from './api/algolia'
+import { AlgoliaConstants } from './constants/algolia'
 import routes from '~react-pages'
 
 export default function App() {
   return (
-    <main className="font-sans px-4 py-10 text-center text-gray-700 dark:text-gray-200">
-      <Router>
+    <Router>
+      <InstantSearch searchClient={searchClient} indexName={AlgoliaConstants.searchIndex}>
         <Routes />
-      </Router>
-      <Footer />
-    </main>
+      </InstantSearch>
+    </Router>
   )
 }
 

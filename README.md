@@ -1,81 +1,41 @@
-<p align='center'>
-  <img src='https://user-images.githubusercontent.com/11247099/111864893-a457fd00-899e-11eb-9f05-f4b88987541d.png' alt='Vitesse - Opinionated Vite Starter Template' width='600'/>
-</p>
+# Algolia Search + React Demo Application
 
-<h6 align='center'>
-<a href="https://vitesse-lite-react.netlify.app/">Live Demo</a>
-</h6>
+## Folder Structure
 
-<h5 align='center'>
-<b>React version of <a href="https://github.com/antfu/vitesse-lite">Vitesse Lite</a></b>
-</h5>
+    .
+    ├── components              # Contains stateless functional components(ui only makes it easier to test + component driven )
+    ├── components-algolia      # Augment our stateless component with algolia state logic
+    ├── constants               # Define app constants(preferably create a different file for each feature)
+    ├── hooks                   # Contains reusable statefull logic that is shared across the app
+    ├── hocs                    # Contains Higher order components that are used across the app
+    ├── api                     # Contains any external api logic and exposed as a set of hooks 
+    ├── pages                   # Contains vite pages code
+    ├── styles                  # UnoCSS global styles definition
+    └── README.md
 
-<br>
+## Setup
+### Pre-requirements
+For Node.js, I recommend strongly suggest using NVM (Node Version Manager).
 
-<p align='center'>
-<b>English</b> | <a href="https://github.com/antfu/vitesse-lite/blob/main/README.zh-CN.md">简体中文</a>
-<!-- Contributors: Thanks for geting interested, however we DON'T accept new transitions to the README, thanks. -->
-</p>
+We use pnpm for dependency management, install instructions are available at https://pnpm.io/installation
 
-## Features
+### Install Dependencies
+- `npx pnpm install`
 
-- ⚡️ [Vite 2](https://github.com/vitejs/vite), [pnpm](https://pnpm.js.org/), [ESBuild](https://github.com/evanw/esbuild) - born with fastness
-
-- 🗂 [File based routing](./src/pages)
-
-- 🎨 [UnoCSS](https://github.com/antfu/unocss) - The instant on-demand atomic CSS engine.
-
-- 😃 Use icons from any icon sets in [Pure CSS](https://github.com/antfu/unocss/tree/main/packages/preset-icons)
-
-- ✅ Use [Vitest](http://vitest.dev/) for unit and components testing
-
-- 🦾 TypeScript, of course
-
-- ☁️ Deploy on Netlify, zero-config
-
-
-<br>
-
-See [Vitesse](https://github.com/antfu/vitesse) for full featureset.
-
-
-## Dropped Features from [Vitesse](https://github.com/antfu/vitesse)
-
-- ~~i18n~~
-- ~~Layouts~~
-- ~~SSG~~
-- ~~PWA~~
-- ~~Markdown~~
-
-## Pre-packed
-
-### UI Frameworks
-
-- [UnoCSS](https://github.com/antfu/unocss) - The instant on-demand atomic CSS engine.
-
-### Icons
-
-- [Iconify](https://iconify.design) - use icons from any icon sets [🔍Icônes](https://icones.netlify.app/)
-- [Pure CSS Icons via UnoCSS](https://github.com/antfu/unocss/tree/main/packages/preset-icons)
-
-### Plugins
-
-- [`vite-plugin-pages`](https://github.com/hannoeru/vite-plugin-pages) - file system based routing
-- [`unplugin-auto-import`](https://github.com/antfu/unplugin-auto-import) - Directly use react/react-router-dom API and others without importing
-- [usehooks-ts](https://usehooks-ts.com/) - collection of useful React hooks
-
-## Try it now!
-
-### GitHub Template
-
-[Create a repo from this template on GitHub](https://github.com/antfu/vitesse-lite/generate).
-
-### Clone to local
-
-If you prefer to do it manually with the cleaner git history
+### Running it in dev mode
+Everything is set. Let's run it!
 
 ```bash
-npx degit lxy-yz/vitesse-lite-react my-react-app
-cd my-react-app
-pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
+npx pnpm run dev
+```
+
+### Starting storybook
+
+```bash
+npx pnpm run storybook
+```
+
+### Run tests
+```bash
+npx pnpm run test
 ```
