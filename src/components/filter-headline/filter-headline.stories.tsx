@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import React from 'react'
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
 
 import { FilterHeadline } from './filter-headline.component'

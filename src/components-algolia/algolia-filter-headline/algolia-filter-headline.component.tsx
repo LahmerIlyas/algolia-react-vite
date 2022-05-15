@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useRefinementList } from 'react-instantsearch-hooks-web'
 import { FilterHeadline } from '~/components/filter-headline/filter-headline.component'
 

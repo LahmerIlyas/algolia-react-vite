@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 interface ButtonProps {
   variant: 'primary' | 'secondary'
 }

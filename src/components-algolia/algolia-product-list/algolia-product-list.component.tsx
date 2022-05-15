@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useInfiniteHits } from 'react-instantsearch-hooks-web'
 import { ProductCard } from '~/components/product-card/product-card.component'
 
@@ -13,7 +14,7 @@ const transformHits = (hits: Array<any>): Array => {
 }
 
 export const AlgoliaProductList: React.FC<{ hasReachedTheEnd: boolean }> = (props) => {
-  const { hits, showMore, isLastPage, sendEvent } = useInfiniteHits({ transformItems: transformHits })
+  const { hits, showMore, isLastPage } = useInfiniteHits({ transformItems: transformHits })
 
   useEffect(() => {
     if (!isLastPage && props.hasReachedTheEnd)

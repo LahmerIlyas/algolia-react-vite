@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import classNames from 'classnames'
 
 const styles = {
@@ -15,13 +16,13 @@ const styles = {
 
 interface TypographyProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement> {
   variant: keyof typeof styles
-  as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'a'
+  as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | any
   className?: string
 }
 
 export const Typography: React.FC<TypographyProps> = ({ variant, className, children, ...other }) => {
   const c = classNames(styles[variant], {
-    [className]: !!className,
+    [className || '']: !!className,
   })
 
   return (
