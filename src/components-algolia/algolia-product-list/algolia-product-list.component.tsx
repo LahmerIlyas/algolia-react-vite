@@ -16,7 +16,6 @@ export const AlgoliaProductList: React.FC<{ hasReachedTheEnd: boolean }> = (prop
   const { hits, showMore, isLastPage, sendEvent } = useInfiniteHits({ transformItems: transformHits })
 
   useEffect(() => {
-    console.log(' AlgoliaProductList bottom')
     if (!isLastPage && props.hasReachedTheEnd)
       showMore()
   }, [props.hasReachedTheEnd])

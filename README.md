@@ -1,5 +1,9 @@
 # Algolia Search + React Demo Application
 
+## Live demo
+```
+https://fanciful-swan-0c60a6.netlify.app/
+```
 ## Folder Structure
 
     .

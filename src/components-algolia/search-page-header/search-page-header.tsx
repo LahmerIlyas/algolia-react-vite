@@ -19,7 +19,7 @@ export const SearchPageHeader: React.FC = () => {
 
   return (
     <div className="relative py-8 flex flex-row justify-between align-center">
-      <img src="/public/logo.svg" />
+      <img src="/logo.svg" />
       <div className="flex flex-row absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         <input list="wizards-list" type="text"
           onChange={onTextChange}
