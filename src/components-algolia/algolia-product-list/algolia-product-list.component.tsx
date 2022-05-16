@@ -23,7 +23,7 @@ export const AlgoliaProductList: React.FC<{ hasReachedTheEnd: boolean }> = (prop
 
   return (
     <div className="grow">
-      <ol className="flex flex-row flex-wrap gap-x-4 gap-y-8">
+      <ol className="flex flex-row flex-wrap justify-between gap-x-4 gap-y-8">
         {hits.map(hit => (
           <ProductCard key={hit.id} {...hit} />
         ))}

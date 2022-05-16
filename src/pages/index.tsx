@@ -11,7 +11,7 @@ export default function Index() {
       <AppBar />
       <SearchPageHeader />
       <div className="flex flex-row">
-        <div className="flex flex-col w-128 mr-16 gap-y-4">
+        <div className="flex flex-col w-128 gap-y-4">
           <AlgoliaFilterHeadline
             attribute="taxonomies.product_cat"
             title="Categories"

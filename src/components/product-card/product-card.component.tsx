@@ -15,7 +15,7 @@ interface ProductCardProps {
 export class ProductCard extends Component<ProductCardProps> {
   render(): ReactNode {
     return (
-      <div className="flex flex-col border-2 rounded-4 border-gray-200 px-4 py-4 lg:basis-[30%] grow shrink lg:max-w-[33%]">
+      <div className="flex flex-col border-2 rounded-4 border-gray-200 px-4 py-4 grow shrink md:basis-[50%] md:max-w-[48%] lg:basis-[30%] lg:max-w-[30%]">
         <img
           src={this.props.imgUrl}
           className="rounded-4 border-none h-xs w-full object-cover object-top"
