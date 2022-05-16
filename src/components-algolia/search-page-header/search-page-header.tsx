@@ -24,13 +24,6 @@ export const SearchPageHeader: React.FC = () => {
         <input list="wizards-list" type="text"
           onChange={onTextChange}
           className="px-4 py-2 rounded-md border-gray-200 border-2" placeholder="Search Products, categories ..." />
-        <datalist id="wizards-list">
-          <option>Harry Potter</option>
-          <option>Hermione</option>
-          <option>Dumbledore</option>
-          <option>Merlin</option>
-          <option>Gandalf</option>
-        </datalist>
         <button className="ml-4" onClick={onSearch}>search</button>
       </div>
       <Typography as="h2" variant="s2">Fresh</Typography>
