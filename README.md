@@ -19,12 +19,14 @@ https://fanciful-swan-0c60a6.netlify.app/
 
 ## Setup
 ### Pre-requirements
-For Node.js, I recommend strongly suggest using NVM (Node Version Manager).
+For Node.js, I strongly suggest using NVM (Node Version Manager).
 
 We use pnpm for dependency management, install instructions are available at https://pnpm.io/installation
 
 ### Install Dependencies
-- `npx pnpm install`
+```bash
+npx pnpm install
+```
 
 ### Running it in dev mode
 Everything is set. Let's run it!
